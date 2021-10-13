@@ -14,10 +14,12 @@ This tutorial is to teach on:
     3. Juruaudit
 
 2. Roles
-    1. Pegawai Perancang
-    2. Pegawai Pengesah
-    3. Pegawai Pelulus
-    4. Ahli Jawatankuasa
+    1. PL - Pegawai Perancang
+    2. PL - Pegawai Pengesah
+    3. PL - Pegawai Pelulus
+    4. PL - Ahli Jawatankuasa
+    5. Pembekal - Pemilik
+    6. Pembekal - Pekerja
 
 ## Tutor and Tutee
 
