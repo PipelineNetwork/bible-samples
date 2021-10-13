@@ -1,0 +1,26 @@
+### Check API
+
+GET http://127.0.0.1:8001/api/makanan
+Authorization: Bearer JrNC7P1OOaCgaDGspeVr25USbhh5jXqLbSJtLwl1
+
+### Create makanan
+
+POST http://127.0.0.1:8001/api/makanan
+content-type: application/json
+Authorization: Bearer JrNC7P1OOaCgaDGspeVr25USbhh5jXqLbSJtLwl1
+
+{
+    "nama": "Nasi Lemak",
+    "harga": 12
+}
+
+### login
+
+POST http://127.0.0.1:8001/api/sanctum/token
+content-type: application/json
+
+{
+    "email": "maelhensem@gmail.com",
+    "password": "password",
+    "device_name": "ipon"
+}
