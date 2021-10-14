@@ -54,4 +54,19 @@ class RoleController extends Controller
     {
         //
     }
+
+    public function register_pembekal(Request $request) {
+        // Step 1 Pembekal row is created.... (Fiza dah buat)
+
+        // Step 2 PL approved pembekal punya acccount, dalam function change status...
+
+        $user = User::insert([
+            'name'=> 'AA',
+            'email'=> 'asd'
+        ]);
+        $role_jawatan = Role::where('nama', 'Pembekal - ')->first();
+        $user->roles()->attach($role_jawatan);
+
+
+    }
 }
