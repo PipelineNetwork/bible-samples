@@ -37,7 +37,7 @@ class BarangController extends Controller
         ]);
     }
 
-    public function beli(Request $request, $barang_id)
+    public function beli(Request $request, Barang $barang)
     {
         $pembelian = Pembelian::where('aktif', true)->first(); // syafiza kena cari jugak pembelian based on user...
         if ($pembelian) {
@@ -49,10 +49,16 @@ class BarangController extends Controller
         }
 
         $pembelian_barang = new PembelianBarang;
-        $pembelian_barang->barang_id = $barang_id;
+        $pembelian_barang->barang_id = $barang->id;
         $pembelian_barang->pembelian_id = $pembelian->id;
         $pembelian_barang->save();
         
+        return redirect('/barangs');
+    }
+
+    public function tamau_beli(Request $request, PembelianBarang $pembelian_barang)
+    {
+        $pembelian_barang->delete();
         return redirect('/barangs');
     }
 

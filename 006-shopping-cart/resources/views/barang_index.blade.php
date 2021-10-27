@@ -22,6 +22,9 @@ senarai barang....
 
 @if ($pembelian_barangs)
     @foreach ($pembelian_barangs as $pembelian_barang)
-    {{$pembelian_barang}}
+    <ul>
+        <li>Pembelian Barang ID: {{$pembelian_barang->id}}</li>
+        <li><a href="/barangs/tamau-beli/{{$pembelian_barang->id}}">Buang dari cart?</a></li>
+    </ul>
     @endforeach
 @endif
