@@ -25,6 +25,17 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+
+        $schedule->call(function () {
+
+            // Logic pertama
+            app('App\Http\Controllers\ReminderController')->hantar_peringatan_cart_aktif_tapi_tak_beli();
+
+            // Logic kedua...
+            app('App\Http\Controllers\ReminderController')->cancel_kalau_admin_tak_approve();
+
+
+        })->daily();        
     }
 
     /**

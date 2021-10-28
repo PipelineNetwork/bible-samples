@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/comparison/{barang_1}/{barang_2}/{barang_3}', [CartController::class, 'compare_barang']);
+
 Route::get('/', function () {
     return view('welcome');
 });
